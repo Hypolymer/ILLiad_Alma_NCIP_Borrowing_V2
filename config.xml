@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>ALMA_NCIP_Borrowing_Client</Name>
+  <Name>ALMA_NCIP_Borrowing_V2</Name>
   <Author>Bill Jones, SUNY Geneseo and Tim Jackson, SUNY SLSS</Author>
   <Version>2.0</Version>
   <Active>True</Active>
@@ -47,6 +47,6 @@
     </Setting>
   </Settings>
   <Files>
-    <File>ALMA_NCIP_borrowing.lua</File>
+    <File>ALMA_NCIP_Borrowing_v2.lua</File>
   </Files>
 </Configuration>
