@@ -1,4 +1,4 @@
---About ALMA_NCIP_Client 1.6
+--About ALMA_NCIP_Borrowing 2.0
 --
 --Author:  Bill Jones III, SUNY Geneseo, IDS Project, jonesw@geneseo.edu
 --Modified by: Tom McNulty, VCU Libraries, tmcnulty@vcu.edu
@@ -15,14 +15,6 @@
 --BorrowingRequestCheckedInFromCustomer
 --This will trigger whenever an item is processed from the Check Item In batch processing form, 
 --regardless of its status (such as if it were cancelled or never picked up by the customer).
---
---LendingRequestCheckOut
---This will trigger whenever a transaction is processed from the Lending Update Stacks Searching form 
---using the Mark Found or Mark Found Scan Now buttons. This will also work on the Lending Processing ribbon
---of the Request form for the Mark Found and Mark Found Scan Now buttons.
---
---LendingRequestCheckIn
---This will trigger whenever a transaction is processed from the Lending Returns batch processing form.
 --
 --Queue names have a limit of 40 characters (including spaces).
 
@@ -271,7 +263,7 @@ local templine = nil;
 	end
 
 local m = '';
-    m = m .. '<?xml version="1.0" encoding="ISO-8859-1"?>'
+    	m = m .. '<?xml version="1.0" encoding="ISO-8859-1"?>'
 	m = m .. '<NCIPMessage xmlns="http://www.niso.org/2008/ncip" version="http://www.niso.org/schemas/ncip/v2_02/ncip_v2_02.xsd">'
 	m = m .. '<AcceptItem>'
 	m = m .. '<InitiationHeader>'
@@ -297,13 +289,13 @@ local m = '';
 	m = m .. '<ItemIdentifierValue>' .. barcode .. '</ItemIdentifierValue>'
 	m = m .. '</ItemId>'
 	m = m .. '<DateForReturn>' .. yr .. '-' .. mnt .. '-' .. dya .. 'T23:59:00' .. '</DateForReturn>'
-    m = m .. '<PickupLocation>' .. pickup_location .. '</PickupLocation>'
+    	m = m .. '<PickupLocation>' .. pickup_location .. '</PickupLocation>'
 	m = m .. '<ItemOptionalFields>'
 	m = m .. '<BibliographicDescription>'
 	m = m .. '<Author>' .. author .. '</Author>'
 	m = m .. '<Title>' .. title .. '</Title>'
-    m = m .. '<Publisher>' .. lender .. '</Publisher>'
-    m = m .. '<PublicationDate>' .. numberofpieces .. '</PublicationDate>'
+    	m = m .. '<Publisher>' .. lender .. '</Publisher>'
+    	m = m .. '<PublicationDate>' .. numberofpieces .. '</PublicationDate>'
 	m = m .. '</BibliographicDescription>'
 	m = m .. '</ItemOptionalFields>'
 	m = m .. '</AcceptItem>'
